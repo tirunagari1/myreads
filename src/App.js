@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Link } from 'react-router-dom'
 import ListBooks from './ListBook';
 import SearchBooks from './SearchBooks';
-//import * as BooksAPI from './BooksAPI'
+import * as BooksAPI from './BooksAPI'
 import './App.css'
 
 class BooksApp extends React.Component {
@@ -10,7 +10,7 @@ class BooksApp extends React.Component {
     books: []
   };
 
-changeShelf = (e,_Book)=>{
+changeStore = (e,_Book)=>{
   const books = this.state.books;
   const store = e.target.value;
   _Book.store = e.target.value;

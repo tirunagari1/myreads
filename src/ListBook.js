@@ -20,23 +20,26 @@ class ListBooks extends Component {
                     <div>
                         <div className="bookshelf">
                             <h2 className="bookshelf-title">Currently Reading</h2>
-                            <Book
+                            {currentlyReading.length>0 && 
+                             <Book
                                 filteredBooks={currentlyReading}
                                 changeShelf={this.props.changeShelf}
-                            />
+                             />}
                             <div className="bookshelf">
                                 <h2 className="bookshelf-title">Want to Read</h2>
-                                <Book
+                                {wantToRead.length >0 && 
+                                 <Book
                                     filteredBooks={wantToRead}
                                     changeShelf={this.props.changeShelf}
-                                />
+                                 />}
                             </div>
                             <div className="bookshelf">
                                 <h2 className="bookshelf-title">Read</h2>
-                                <Book 
+                             { read.length > 0 && 
+                              <Book 
                                 filteredBooks = { read }
                                 changeShelf = { this.props.changeShelf }
-                                />
+                                />}
                             </div>
                         </div>
                     </div>
